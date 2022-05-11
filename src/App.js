@@ -4,12 +4,12 @@ import { HashRouter as Router, Route, Link, NavLink, Redirect } from "react-rout
 let Page1 = lazy(() => import('./components/test/page1'))
 let Page2 = lazy(() => import('./components/test/page2'))
 
-//App.js ÀïÃæÖ»ÉèÖÃÂ·ÓÉ£¬ÆäËû²»ÔÚ´Ë´¦Ğ´
+//App.js é‡Œé¢åªè®¾ç½®è·¯ç”±ï¼Œå…¶ä»–ä¸åœ¨æ­¤å¤„å†™
 function App() {
     return (
         <Suspense fallback="">
             <Router>
-                {/*<Route path="/" exact component={Page1}></Route>*/}{/*ÉèÖÃÖ÷Ò³*/}
+                {/*<Route path="/" exact component={Page1}></Route>*/}{/*è®¾ç½®ä¸»é¡µ*/}
                 <Route path="/page1" component={Page1}></Route>
                 <Route path="/page2" component={Page2}></Route>
             </Router>
