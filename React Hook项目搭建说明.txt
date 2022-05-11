@@ -36,3 +36,9 @@ module.exports = function (app) {
     );
     //此处能设置多个代理请求，axios.defaults.baseURL 读取配置的，就能实现通过配置调用不同的服务器地址
 };
+
+3.src 目录下创建 context.js，内容如下：
+//context.js 文件，用于创建共享数据对象
+import { createContext } from "react";
+const context = createContext(null);
+export default context;
