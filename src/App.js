@@ -4,7 +4,7 @@ import { HashRouter as Router, Route, Link, NavLink, Redirect } from "react-rout
 let Page1 = lazy(() => import('./components/test/page1'))
 let Page2 = lazy(() => import('./components/test/page2'))
 
-//App.js 里面只设置路由，其他不在此处写
+//App.js 里面只设置路由，其他不在此处写（为了实现页面间的完全分离）
 function App() {
     return (
         <Suspense fallback="">
