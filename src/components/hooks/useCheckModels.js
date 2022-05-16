@@ -1,5 +1,10 @@
 /*
  数据列表的选中组件
+ 用法：
+ 1.let [checks, setChecks] = useCheckModels();
+ 2. onChange={(e) => e.target.checked ? setChecks(data) : setChecks([])}
+ 3. checked={checks.find(s => s == m)} onChange={() => setChecks(m)}
+
  说明：
  checks 是个数组里面包含当前已经选中的对象
  set(数组) 设置选中的有哪些，如果是 set([]) 则是全不选
