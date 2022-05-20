@@ -5,7 +5,7 @@ import $ from 'jquery'
 //import './../plugin'
 //import context from './../../context'
 
-function Test() {
+export default function () {
 
 
 
@@ -15,5 +15,3 @@ function Test() {
         </div>
     );
 }
-
-export default Test;
