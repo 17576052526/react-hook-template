@@ -14,12 +14,6 @@ var common = {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.toString().substr(window.location.toString().indexOf('?') + 1).match(reg);
         if (r != null) return decodeURI(r[2]); return '';
-    },
-    //获取路由中的参数，因为 this.props.match.params.name 取不到最新的参数值，才用此方式
-    routeParam: function (index) {
-        var url = window.location.href;
-        var arr = url.substr(url.indexOf('#') + 2).split('/');
-        return index < arr.length ? arr[index] : '';
     }
 }
 export default common;
