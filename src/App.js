@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { HashRouter as Router, Route, Link, NavLink, Redirect } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import axios from 'axios'
 
 let Page1 = lazy(() => import('./components/test/page1'))
@@ -19,9 +19,12 @@ function App() {
     return (
         <Suspense fallback="">
             <Router>
-                {/*<Route path="/" exact component={Page1}></Route>*/}{/*设置主页*/}
-                <Route path="/page1" component={Page1}></Route>
-                <Route path="/page2" component={Page2}></Route>
+                <Routes>
+                    {/*<Route path="/" element={<Navigate to="/page2" />}></Route>*/}{/*重定向*/}
+                    {/*<Route path="/" exact component={Page1}></Route>*/}{/*设置主页*/}
+                    <Route path="/page1" element={<Page1 />}></Route>
+                    <Route path="/page2" element={<Page2 />}></Route>
+                </Routes>
             </Router>
         </Suspense>
     );
