@@ -9,7 +9,7 @@ export default function () {
 
     return (
         <div>
-            Test
+            head
         </div>
     );
 }

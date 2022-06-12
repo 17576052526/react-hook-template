@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import axios from 'axios'
 
-let Page1 = lazy(() => import('./components/test/page1'))
-let Page2 = lazy(() => import('./components/test/page2'))
+let Page1 = lazy(() => import('./components/page1'))
+let Page2 = lazy(() => import('./components/page2'))
 
 //App.js 里面只设置路由，其他不在此处写（为了实现页面间的完全分离）
 function App() {
